@@ -1,1 +1,63 @@
-<p>negocio works!</p>
+<h1>Mis Negocios</h1>
+<div class="container d-flex justify-content-center mt-100">
+    <div class="input-group-overlay d-none d-lg-flex mx-4"> <input class="form-control appended-form-control" type="text" placeholder="Buscar restaurante">
+        <div class="input-group-append-overlay"><span class="input-group-text"><i class="fa fa-search"></i></span></div>
+    </div>
+</div>
+
+
+<!--div class="container mt-5">
+    <table class="table table-borderless table-responsive card-1 p-4">
+        <thead>
+            <tr class="border-bottom">
+                <th> <span class="ml-2">Numero</span> </th>
+                <th> <span class="ml-2">Nombre</span> </th>
+                <th> <span class="ml-2">Direccion</span></th>
+                <th> <span class="ml-2">Ventas</span></th>
+                <th> <span class="ml-2">Acciones</span> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <div class="col-4" *ngFor="let negocio of negocios">
+                <tr class="border-bottom">
+                    <td>
+                        <div class="p-2"> <span class="d-block font-weight-bold"></span> <small></small> </div>
+                    </td>
+                    <td>
+                        <div class="p-2 d-flex flex-row align-items-center mb-2">
+                            <div class="d-flex flex-column ml-2"> <span class="d-block font-weight-bold">{{negocio.nombre}}</span> <small class="text-muted"></small> </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="p-2"> <span class="font-weight-bold">{{negocio.direccion}}</span> </div>
+                    </td>
+                    <td>
+                        <div class="p-2"> <span class="font-weight-bold">{{negocio.ventas| currency: 'EUR'}}</span> </div>
+                    </td>
+                    <td>
+                        <div class="p-2 icons"> <i class="fa fa-phone text-danger"></i> <i class="fa fa-adjust text-danger"></i> <i class="fa fa-share"></i> </div>
+                    </td>
+                </tr>
+            </div>
+        </tbody>
+    </table>
+</div-->
+
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-4" *ngFor="let negocio of negocios">
+            <figure class="card card-product-grid">
+                <figcaption class="info-wrap">
+                    <div>
+                        <h5 class="card-title">{{negocio.nombre}}</h5>
+                        <p class="card-text">{{negocio.direccion}}</p>
+                        <p class="text-success">{{negocio.ventas| currency: 'EUR'}}</p>
+                        <i class="bi bi-info-circle"></i>
+                        <div class="p-2 icons"> <i class="fa fa-phone text-danger"></i> <i class="fa fa-adjust text-danger"></i> <i class="fa fa-share"></i> </div>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+</div>

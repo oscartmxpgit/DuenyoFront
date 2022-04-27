@@ -1,246 +1,262 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <title>Restaurante</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="utf-8">
+    <title>Restaurante</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css' rel='stylesheet'>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
-    <style>@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
-
-body {
-font-family: 'Poppins', sans-serif;
-background: #fafafa
-}
-
-p {
-font-size: 1.1em;
-font-weight: 300;
-line-height: 1.7em;
-color: rgb(105, 100, 100)
-}
-
-a,
-a:hover,
-a:focus {
-color: inherit;
-text-decoration: none;
-transition: all 0.3s
-}
-
-.navbar {
-padding: 15px 10px;
-background: #fff;
-border: none;
-border-radius: 0;
-margin-bottom: 40px;
-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1)
-}
-
-.navbar-btn {
-box-shadow: none;
-outline: none !important;
-border: none
-}
-
-.line {
-width: 100%;
-height: 1px;
-border-bottom: 1px dashed #ddd
-}
-
-.wrapper {
-display: flex;
-width: 90%;
-align-items: stretch;
-justify-content: center
-}
-
-#sidebar {
-min-width: 250px;
-max-width: 250px;
-background: #3b4247;
-color: #fff;
-transition: all 0.3s
-}
-
-#sidebar.active {
-margin-left: -250px
-}
-
-#sidebar .sidebar-header {
-padding: 20px;
-background: #3b4247
-}
-
-#sidebar ul.components {
-padding: 20px 0px;
-border-bottom: 1px solid #869095
-}
-
-#sidebar ul p {
-padding: 10px;
-font-size: 15px;
-display: block;
-color: #fff
-}
-
-#sidebar ul li a {
-padding: 10px;
-font-size: 1.1em;
-display: block
-}
-
-#sidebar ul li a:hover {
-color: #fff;
-background: #a2b2b8
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-color: #fff;
-background: #c4d2d8
-}
-
-a[data-toggle="collapse"] {
-position: relative
-}
-
-.dropdown-toggle::after {
-display: block;
-position: absolute;
-top: 50%;
-right: 20px;
-transform: translateY(-50%)
-}
-
-ul ul a {
-font-size: 0.9em !important;
-padding-left: 30px !important;
-background: #9faeb5
-}
-
-ul.CTAs {
-padding: 20px
-}
-
-ul.CTAs a {
-text-align: center;
-font-size: 0.9em !important;
-display: block;
-border-radius: 5px;
-margin-bottom: 5px
-}
-
-a.download,
-a.download:hover {
-background: #a1b0b7;
-color: #fff
-}
-
-#content {
-width: 100%;
-padding: 20px;
-min-height: 100vh;
-transition: all 0.3s
-}
-
-.content-wrapper {
-padding: 40px;
-justify-content: center;
-align-items: stretch
-}
-
-@media(maz-width:768px) {
-#sidebar {
-margin-left: -250px
-}
-
-#sidebar.active {
-margin-left: 0px
-}
-
-#sidebarCollapse span {
-display: none
-
-}
-}</style>
+    <style>
+        @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #fafafa
+        }
+        
+        p {
+            font-size: 1.1em;
+            font-weight: 300;
+            line-height: 1.7em;
+            color: rgb(105, 100, 100)
+        }
+        
+        a,
+        a:hover,
+        a:focus {
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.3s
+        }
+        
+        .navbar {
+            padding: 15px 10px;
+            background: #fff;
+            border: none;
+            border-radius: 0;
+            margin-bottom: 40px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1)
+        }
+        
+        .navbar-btn {
+            box-shadow: none;
+            outline: none !important;
+            border: none
+        }
+        
+        .line {
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dashed #ddd
+        }
+        
+        .wrapper {
+            display: flex;
+            width: 90%;
+            align-items: stretch;
+            justify-content: center
+        }
+        
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background: #3b4247;
+            color: #fff;
+            transition: all 0.3s
+        }
+        
+        #sidebar.active {
+            margin-left: -250px
+        }
+        
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #3b4247
+        }
+        
+        #sidebar ul.components {
+            padding: 20px 0px;
+            border-bottom: 1px solid #869095
+        }
+        
+        #sidebar ul p {
+            padding: 10px;
+            font-size: 15px;
+            display: block;
+            color: #fff
+        }
+        
+        #sidebar ul li a {
+            padding: 10px;
+            font-size: 1.1em;
+            display: block
+        }
+        
+        #sidebar ul li a:hover {
+            color: #fff;
+            background: #a2b2b8
+        }
+        
+        #sidebar ul li.active>a,
+        a[aria-expanded="true"] {
+            color: #fff;
+            background: #c4d2d8
+        }
+        
+        a[data-toggle="collapse"] {
+            position: relative
+        }
+        
+        .dropdown-toggle::after {
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%)
+        }
+        
+        ul ul a {
+            font-size: 0.9em !important;
+            padding-left: 30px !important;
+            background: #9faeb5
+        }
+        
+        ul.CTAs {
+            padding: 20px
+        }
+        
+        ul.CTAs a {
+            text-align: center;
+            font-size: 0.9em !important;
+            display: block;
+            border-radius: 5px;
+            margin-bottom: 5px
+        }
+        
+        a.download,
+        a.download:hover {
+            background: #a1b0b7;
+            color: #fff
+        }
+        
+        #content {
+            width: 100%;
+            padding: 20px;
+            min-height: 100vh;
+            transition: all 0.3s
+        }
+        
+        .content-wrapper {
+            padding: 40px;
+            justify-content: center;
+            align-items: stretch
+        }
+        
+        @media(maz-width:768px) {
+            #sidebar {
+                margin-left: -250px
+            }
+            #sidebar.active {
+                margin-left: 0px
+            }
+            #sidebarCollapse span {
+                display: none
+            }
+        }
+    </style>
 </head>
 
 <body oncontextmenu='return false' class='snippet-body'>
-<div class="wrapper">
-<nav id="sidebar">
-<div class="sidebar-header">
-<h3>Restaurante</h3>
-<hr>
-</div>
-<ul class="list-unstyled components">
-<p>MENUS</p>
-<li> <a href="#">Empresa</a> </li>
-<li> <a href="#">Empleados</a> </li>
-<li> <a href="#">Mesas</a> </li>
-<li> <a href="#">Pedidos</a> </li>
-<li> <a href="#">Cajas</a> </li>
-<li> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Proveedores</a>
-<ul class="collapse list-unstyled" id="homeSubmenu">
-<li> <a href="#">De servicios</a> </li>
-<li> <a href="#">De alimentos</a> </li>
-</ul>
-</li>
-<li> <a href="#">Inventario</a> </li>
-</nav>
+    <div class="wrapper">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Restaurante</h3>
+                <hr>
+            </div>
+            <ul class="list-unstyled components">
+                <p>MENUS</p>
+                <li> <a href="#">Empresa</a></li>
+                <li> <a href="/negocio">Negocios</a></li>
+                <li> <a href="#">Empleados</a> </li>
+                <li> <a href="#">Mesas</a> </li>
+                <li> <a href="#">Pedidos</a> </li>
+                <li> <a href="#">Cajas</a> </li>
+                <li> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Proveedores</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li> <a href="#">De servicios</a> </li>
+                        <li> <a href="#">De alimentos</a> </li>
+                    </ul>
+                </li>
+                <li> <a href="#">Inventario</a> </li>
+        </nav>
 
 
-<div class="content">
-<nav class="navbar navbar-expand-lg navbar-light bg-light"> <button type="button" id="sidebarCollapse" class="btn btn-info"> <i class="fa fa-align-justify"></i> </button> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item active"> <a class="nav-link" href="#">Panel de control <span class="sr-only">(current)</span></a> </li>
-<li class="nav-item"> <a class="nav-link" href="#">Usuarios</a> </li>
-<li class="nav-item"> <a class="nav-link" href="#"><img src="assets/svg/notifications-outline.svg" width="35px" height="35px" style="padding-right: 10%;"></a> </li>
-<li class="nav-item"> <a class="nav-link" href="#"><img src="assets/svg/list-outline.svg" width="35px" height="35px" style="padding-right: 10%;"></a> </li>
-<li class="nav-item"> <a class="nav-link" href="#"><img src="assets/svg/mail-open-outline.svg" width="35px" height="35px" style="padding-right: 10%;"></a> </li>
-<li class="nav-item">  <div class="dropdown border-top"> <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false"> <img src="assets/svg/Foto_.jpg" alt="mdo" width="35" height="35" class="rounded-circle"> </a>
-  <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
-      <li><a class="dropdown-item" href="#">New project...</a></li>
-      <li><a class="dropdown-item" href="#">Settings</a></li>
-      <li><a class="dropdown-item" href="#">Profile</a></li>
-      <li>
-          <hr class="dropdown-divider">
-      </li>
-      <li><a class="dropdown-item" href="#">Sign out</a></li>
-  </ul>
-</div> </li>
-</ul>
-</div>
-</nav>
-<div class="content-wrapper">
-<h2>Collapsible Sidebar Using Bootstrap 4</h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam nulla facilisi cras fermentum odio eu. Eget nulla facilisi etiam dignissim diam quis enim. Et netus et malesuada fames ac turpis egestas integer eget. Tortor at risus viverra adipiscing at in tellus. Cras adipiscing enim eu turpis. Malesuada nunc vel risus commodo viverra. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere. Ac placerat vestibulum lectus mauris ultrices eros. In arcu cursus euismod quis viverra nibh cras. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum. In fermentum posuere urna nec tincidunt praesent semper. Ultricies mi quis hendrerit dolor. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Praesent tristique magna sit amet purus gravida quis. Enim nunc faucibus a pellentesque sit amet porttitor.
-Amet justo donec enim diam vulputate. Aliquet eget sit amet tellus cras. Tincidunt arcu non sodales neque. Semper auctor neque vitae tempus quam. In massa tempor nec feugiat nisl pretium fusce id. Fames ac turpis egestas integer eget aliquet. Proin sagittis nisl rhoncus mattis rhoncus urna neque viverra. Ut sem nulla pharetra diam. Vitae tempus quam pellentesque nec nam aliquam sem. Eget duis at tellus at urna condimentum mattis. Tellus orci ac auctor augue mauris. Eget sit amet tellus cras adipiscing enim eu turpis. Nam aliquam sem et tortor. Ac tincidunt vitae semper quis lectus. Mollis nunc sed id semper risus in hendrerit. Tincidunt id aliquet risus feugiat. Massa eget egestas purus viverra accumsan in nisl.
-Quis enim lobortis scelerisque fermentum. Ut diam quam nulla porttitor massa. Nunc sed id semper risus in. Mattis pellentesque id nibh tortor. Ac orci phasellus egestas tellus rutrum. Congue nisi vitae suscipit tellus mauris a diam. Facilisis volutpat est velit egestas. Quam viverra orci sagittis eu volutpat odio. Etiam dignissim diam quis enim lobortis. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Sit amet luctus venenatis lectus. Mi eget mauris pharetra et ultrices neque. Sit amet cursus sit amet dictum sit amet. Eget lorem dolor sed viverra. Neque egestas congue quisque egestas diam. Vestibulum lectus mauris ultrices eros in cursus turpis. Et leo duis ut diam quam nulla. Egestas sed tempus urna et pharetra. Aliquam sem et tortor consequat id. Sollicitudin tempor id eu nisl nunc mi.
-.</p>
+        <div class="content">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"> <button type="button" id="sidebarCollapse" class="btn btn-info"> <i class="fa fa-align-justify"></i> </button> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"> <a class="nav-link" href="#">Panel de control <span class="sr-only">(current)</span></a> </li>
+                        <li class="nav-item"> <a class="nav-link" href="#">Usuarios</a> </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="assets/svg/notifications-outline.svg" width="35px" height="35px" style="padding-right: 10%;"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="assets/svg/list-outline.svg" width="35px" height="35px" style="padding-right: 10%;"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><img src="assets/svg/mail-open-outline.svg" width="35px" height="35px" style="padding-right: 10%;"></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="dropdown border-top">
+                                <a href="#" class="d-flex align-items-center justify-content-center p-3 link-dark text-decoration-none dropdown-toggle" id="dropdownUser3" data-bs-toggle="dropdown" aria-expanded="false"> <img src="assets/svg/Foto_.jpg" alt="mdo" width="35" height="35" class="rounded-circle"> </a>
+                                <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser3">
+                                    <li><a class="dropdown-item" href="#">New project...</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Sign out</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="content-wrapper">
+                <h2>Collapsible Sidebar Using Bootstrap 4</h2>
+                <!--p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquam nulla facilisi cras fermentum odio eu. Eget nulla facilisi etiam dignissim diam quis enim. Et netus et
+                    malesuada fames ac turpis egestas integer eget. Tortor at risus viverra adipiscing at in tellus. Cras adipiscing enim eu turpis. Malesuada nunc vel risus commodo viverra. Enim nulla aliquet porttitor lacus luctus accumsan tortor posuere.
+                    Ac placerat vestibulum lectus mauris ultrices eros. In arcu cursus euismod quis viverra nibh cras. Non quam lacus suspendisse faucibus interdum posuere lorem ipsum. In fermentum posuere urna nec tincidunt praesent semper. Ultricies
+                    mi quis hendrerit dolor. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Praesent tristique magna sit amet purus gravida quis. Enim nunc faucibus a pellentesque sit amet porttitor. Amet justo donec enim diam vulputate.
+                    Aliquet eget sit amet tellus cras. Tincidunt arcu non sodales neque. Semper auctor neque vitae tempus quam. In massa tempor nec feugiat nisl pretium fusce id. Fames ac turpis egestas integer eget aliquet. Proin sagittis nisl rhoncus
+                    mattis rhoncus urna neque viverra. Ut sem nulla pharetra diam. Vitae tempus quam pellentesque nec nam aliquam sem. Eget duis at tellus at urna condimentum mattis. Tellus orci ac auctor augue mauris. Eget sit amet tellus cras adipiscing
+                    enim eu turpis. Nam aliquam sem et tortor. Ac tincidunt vitae semper quis lectus. Mollis nunc sed id semper risus in hendrerit. Tincidunt id aliquet risus feugiat. Massa eget egestas purus viverra accumsan in nisl. Quis enim lobortis
+                    scelerisque fermentum. Ut diam quam nulla porttitor massa. Nunc sed id semper risus in. Mattis pellentesque id nibh tortor. Ac orci phasellus egestas tellus rutrum. Congue nisi vitae suscipit tellus mauris a diam. Facilisis volutpat
+                    est velit egestas. Quam viverra orci sagittis eu volutpat odio. Etiam dignissim diam quis enim lobortis. Sollicitudin nibh sit amet commodo nulla facilisi nullam vehicula. Sit amet luctus venenatis lectus. Mi eget mauris pharetra et
+                    ultrices neque. Sit amet cursus sit amet dictum sit amet. Eget lorem dolor sed viverra. Neque egestas congue quisque egestas diam. Vestibulum lectus mauris ultrices eros in cursus turpis. Et leo duis ut diam quam nulla. Egestas sed
+                    tempus urna et pharetra. Aliquam sem et tortor consequat id. Sollicitudin tempor id eu nisl nunc mi. .
+                </p-->
 
 
-<app-root></app-root>
+                <app-root></app-root>
 
 
-</div>
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 
-  <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
-  <script type='text/javascript' src=''></script>
-  <script type='text/javascript' src=''></script>
-  <script type='text/Javascript'>$(document).ready(function(){
-$("#sidebarCollapse").on('click', function(){
-$("#sidebar").toggleClass('active');
-});
-});</script>
+    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js'></script>
+    <script type='text/javascript' src=''></script>
+    <script type='text/javascript' src=''></script>
+    <script type='text/Javascript'>$(document).ready(function(){ $("#sidebarCollapse").on('click', function(){ $("#sidebar").toggleClass('active'); }); });
+    </script>
 
 </body>
+
 </html>
